@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <style>
+        /* Tổng thể */
+        body {
+            background-image: url('img/background_server.jpg'); /* Đường dẫn tới tấm hình của bạn */
+            background-size: cover; /* Để hình ảnh tự co giãn phù hợp với kích thước trang */
+            background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+            background-position: center top center bottom ; /* Căn hình ảnh từ phía trên và giữa */
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        /* Phần đầu trang */
+        header {
+            background-image: url('img/Baner_01.png'); /* Hình nền đầu trang */
+            background-size: cover; /* Tự động co dãn để bao phủ đẹp */
+            background-position: center; /* Căn giữa hình ảnh */
+            background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+            height: 80px; /* Điều chỉnh chiều cao cân đối */
+            display: flex; /* Dùng Flexbox để sắp xếp nội dung */
+            justify-content: space-between; /* Giãn cách nội dung */
+            align-items: center; /* Căn giữa nội dung theo chiều dọc */
+            padding: 0 40px; /* Khoảng cách hai bên rộng rãi hơn */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng mượt */
+            background-color: #0C1A9F;
+        }
+
+        header .logo {
+            margin-left: auto; /* Đẩy logo sang bên phải */
+            text-align: right; /* Đảm bảo chữ căn lề phải */
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Sắp xếp các mục theo hàng ngang */
+            justify-content: flex-end; /* Căn tất cả các mục về bên phải */
+            gap: 15px; /* Khoảng cách giữa các mục menu */
+        }
+
+        header nav ul li a {
+            text-decoration: none; /* Xóa gạch chân */
+            color: white; /* Màu chữ trắng */
+            font-weight: bold; /* Tăng độ đậm chữ */
+            padding: 8px 12px; /* Tạo khoảng cách bên trong nút menu */
+            border-radius: 6px; /* Bo góc nhẹ nhàng */
+            transition: background-color 0.3s; /* Hiệu ứng mượt khi hover */
+        }
+
+        header nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.3); /* Nền sáng hơn khi rê chuột */
+        }
+
+        /* Nội dung chính */
+        main {
+            padding: 30px;
+        }
+
+        main h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        main p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Chân trang */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            font-size: 14px;
+            position: fixed; /* Cố định footer */
+            bottom: 0; /* Gắn footer vào phía dưới trang */
+            width: 100%; /* Phủ toàn bộ chiều ngang */
+            text-align: center; /* Căn giữa nội dung */
+            z-index: 100; /* Đảm bảo footer nằm trên các thành phần khác */
+        }
+    </style>
+</head>
+<body>
+    <!-- Phần đầu trang -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="2_Thongke.html">Thống kê</a></li>
+                <li><a href="contact.html">Quản lí</a></li>
+                <li><a href="contact.html">Quản lí</a></li>
+                <li><a href="contact.html">Quản lí</a></li>
+                <li><a href="contact.html">Quản lí</a></li>
+                <li><a href="contact.html">Quản lí</a></li>
+            </ul>
+        </nav>
+    </header>    
+
+    <!-- Nội dung chính -->
+    <main>
+        <h1>Chào mừng bạn đến với trang chủ</h1>
+        <p>Nội dung chính sẽ được hiển thị tại đây.</p>
+    </main>
+
+    <!-- Chân trang -->
+    <footer>
+        <p>© EXECUTIVE STAFF MEDIA AND EVENTS TEAM OF TAN TIEN LOWER & UPPER SECONDARY SCHOOL</p>
+    </footer>
+</body>
+</html>

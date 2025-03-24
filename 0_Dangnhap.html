@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao diện đăng nhập</title>
+    <style> 
+    body {
+    background-image: url('img/background_home.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    }
+
+    .container {
+        margin-top: 100px;
+    }
+    h1 {
+    line-height: 1.5;
+    }
+
+    .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* khoảng cách giữa các logo */
+    margin-top: 20px;
+    }
+
+    .logo-container img {
+        max-width: 100px; /* kích thước tối đa cho logo */
+        height: auto;
+    }
+
+    .login-box {
+    background-color: transparent; /* Nền trong suốt */
+    border: 4px solid transparent;
+    border-radius: 10px; /* Bo góc */
+    padding: 20px;
+    display: inline-block;
+    color: white; /* Màu chữ */
+    background-image: linear-gradient(to right, transparent, transparent),
+                    linear-gradient(to right, #4facfe00, #00f1fe00); /* Gradient hiệu ứng */
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 0 15px rgba(79, 172, 254, 0.8); /* Hiệu ứng phát sáng */
+    }
+
+    .login-box input {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        width: 80%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .login-box button {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .login-box button:hover {
+        background-color: #0056b3;
+    }
+
+    .footer {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="img\logo_01.png" alt="Logo 1">
+            <img src="img\logo_02.png" alt="Logo 2">
+        </div>
+
+        <h1>HỆ THỐNG BÁO CÁO <br> THEO DÕI THI ĐUA TRƯỜNG THCS & THPT TÂN TIẾN</h1>
+        <div class="login-box">
+            <h2>ĐĂNG NHẬP HỆ THỐNG</h2>
+            <input id="username" type="text" placeholder="Tên đăng nhập">
+            <input id="password" type="password" placeholder="Mật khẩu">
+            <button onclick="validateLogin()">Đăng nhập</button>
+        </div>
+    
+        <script>
+            function validateLogin() {
+                // Tên và mật khẩu hợp lệ
+                const adminUsername = "admin";
+                const adminPassword = "tantien";
+                const teacherUsername = "giaovien";
+                const teacherPassword = "giaovientantien";
+        
+                // Lấy giá trị từ input
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+        
+                // Kiểm tra điều kiện đăng nhập
+                if (username === adminUsername && password === adminPassword) {
+                    // Chuyển hướng admin sang trang chủ
+                    window.location.href = "1_Trangchu.html";
+                } else if (username === teacherUsername && password === teacherPassword) {
+                    // Chuyển hướng giáo viên sang trang thống kê
+                    window.location.href = "2_Thongkegiaovien.html";
+                } else {
+                    // Thông báo lỗi
+                    alert("Tên đăng nhập hoặc mật khẩu không đúng!");
+                }
+            }
+        </script>        
+
+        <div class="footer">
+            <p>© EXECUTIVE STAFF TEAM</p>
+            <p>Hỗ trợ kỹ thuật: imlenam12468@gmail.com</p>
+        </div>
+    </div>
+</body>
+</html>

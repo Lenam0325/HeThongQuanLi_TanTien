@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THỐNG KÊ DÀNH CHO GIÁO VIÊN</title>
+    <style>
+        /* Tổng thể */
+        body {
+            background:#ffe5d4; /* Hiệu ứng gradient */
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        /* Nội dung chính */
+        main {
+            padding: 30px;
+        }
+
+        main h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        main p {
+            font-size: 16px;
+            color: #666;
+        }
+
+    </style>
+    
+    <script>
+        // Nạp header và footer
+        document.addEventListener("DOMContentLoaded", function () {
+            // Tải phần đầu trang
+            fetch('header.html')
+                .then(response => {
+                    if (response.ok) return response.text();
+                    else throw new Error("Không thể tải header: " + response.status);
+                })
+                .then(data => document.querySelector("header").innerHTML = data) // Chèn nội dung vào thẻ <header>
+                .catch(error => console.error("Lỗi tải header:", error));
+
+            // Tải phần chân trang
+            fetch('footer.html')
+                .then(response => {
+                    if (response.ok) return response.text();
+                    else throw new Error("Không thể tải footer: " + response.status);
+                })
+                .then(data => document.querySelector("footer").innerHTML = data) // Chèn nội dung vào thẻ <footer>
+                .catch(error => console.error("Lỗi tải footer:", error));
+        });
+    </script>
+
+</head>
+<body>
+    <header></header> <!-- Header được nạp từ header.html -->
+    <main>
+        <h1>Chào mừng bạn đến với trang chủ</h1>
+        <p>Nội dung chính sẽ được hiển thị tại đây.</p>
+    </main>
+    <footer></footer> <!-- Footer được nạp từ footer.html -->
+</body>
+</html>
